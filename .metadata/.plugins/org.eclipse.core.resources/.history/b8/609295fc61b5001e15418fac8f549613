@@ -1,0 +1,36 @@
+package PageObject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class AmazonSignInPage {
+
+	WebDriver driver;
+	
+	By phoneNo=By.xpath("//input[@type='email']");
+	By SubmitBtn=By.xpath("//input[@class='a-button-input']");
+	By PSW=By.xpath("//input[@type='password']");
+	By Button=By.xpath("//input[@id='signInSubmit']");
+	
+	
+	public AmazonSignInPage(WebDriver driver2) {
+		this.driver=driver2;
+	}
+
+	public WebElement Number() 
+	{
+		return driver.findElement(phoneNo);
+	}
+	
+	public WebElement Button() 
+	{
+		return driver.findElement(SubmitBtn);
+		
+	}
+	public WebElement password() 
+	{
+		return driver.findElement(PSW);
+		
+	}
+}
